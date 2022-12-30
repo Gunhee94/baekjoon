@@ -11,11 +11,8 @@ for (let i = 1; i < input.length; i++) {
     } else {
         for (let j = 0; j < strArr.length; j++) {
             if (strArr[j + 1] !== undefined) {
-                if (strArr[j] !== strArr[j + 1]) {
-                    if (input[j].includes(strArr[i])) {
-                        count++;
-                        console.log("여기");
-                    }
+                if (strArr[j] === strArr[j + 1]) {
+                    count++;
                 }
             }
         }
