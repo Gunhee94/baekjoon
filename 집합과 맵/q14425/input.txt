@@ -1,0 +1,17 @@
+5 11
+ca
+cb
+cd
+ce
+cf
+ca
+cb
+cd
+ca
+cb
+cd
+ca
+cb
+cd
+ca
+cb
