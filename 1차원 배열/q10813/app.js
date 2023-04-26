@@ -4,11 +4,16 @@ const input = fs.readFileSync(filePath).toString().trim().split("\n");
 
 const [N, M] = input[0].split(" ").map(Number);
 
-let arr = Array(N).fill(0);
+let arr = [];
+for (let i = 1; i <= N; i++) {
+    arr.push(i);
+}
+
 for (let i = 1; i <= M; i++) {
-    let [first, second, k] = input[i].split(" ").map(Number);
-    for (let j = first; j <= second; j++) {
-        arr[j - 1] = k;
-    }
+    let [first, second] = input[i].split(" ").map(Number);
+    const firstValue = arr[first - 1];
+    const secondValue = arr[second - 1];
+    arr[first - 1] = secondValue;
+    arr[second - 1] = firstValue;
 }
 console.log(arr.join(" "));
